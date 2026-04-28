@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ameh brainard · Portfolio | Software Engineer</title>
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+<!-- Background ERD diagram (school database management system theme) -->
+<div class="portfolio-bg-diagram">
+  <svg class="erd-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        .table-rect { fill: none; stroke: #2463EB; stroke-width: 1.2; stroke-dasharray: 4 3; opacity: 0.6; }
+        .relation-line { stroke: #3A7BEC; stroke-width: 1.2; fill: none; stroke-dasharray: 3 2; opacity: 0.5; }
+        .table-text { fill: #1F3A7C; font-size: 12px; font-family: monospace; opacity: 0.5; font-weight: 500;}
+      </style>
+    </defs>
+    <!-- Entities: Students, Courses, Enrollments, Instructors (school DB diagram) -->
+    <rect class="table-rect" x="150" y="120" width="180" height="80" rx="8" />
+    <text class="table-text" x="165" y="145">📘 students</text>
+    <text class="table-text" x="165" y="165">id | name | major</text>
+    
+    <rect class="table-rect" x="550" y="100" width="180" height="80" rx="8" />
+    <text class="table-text" x="565" y="125">📚 courses</text>
+    <text class="table-text" x="565" y="145">course_id | title | credits</text>
+
+    <rect class="table-rect" x="350" y="320" width="200" height="90" rx="8" />
+    <text class="table-text" x="365" y="345">🔗 enrollments</text>
+    <text class="table-text" x="365" y="365">student_id | course_id</text>
+    <text class="table-text" x="365" y="385">grade | semester</text>
+
+    <rect class="table-rect" x="800" y="260" width="170" height="80" rx="8" />
+    <text class="table-text" x="815" y="285">👩‍🏫 instructors</text>
+    <text class="table-text" x="815" y="305">instructor_id | name</text>
+
+    <line class="relation-line" x1="330" y1="160" x2="550" y2="150" />
+    <line class="relation-line" x1="450" y1="320" x2="350" y2="200" />
+    <line class="relation-line" x1="550" y1="180" x2="450" y2="320" />
+    <line class="relation-line" x1="800" y1="300" x2="550" y2="180" />
+    <!-- additional small decorative -->
+    <text class="table-text" x="60" y="500" font-size="10">🔍 SCHOOL DBMS ARCHITECTURE</text>
+  </svg>
+</div>
+
+<div class="site-wrapper">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">CyberAce.dev</a>
+      <ul class="nav-menu">
+        <li><a href="home.html" id="homeLink">Home</a></li>
+        <li><a href="projects.html" class="active-page">Portfolio</a></li>
+        <li><a href="about.html" id="aboutLink">About me</a></li>
+        <li><a href="skills.html" id="servicesLink">skills</a></li>
+        <li><a href="contact.html" id="contactLink">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="portfolio-hero">
+        <h1>✨ Code that ships • impact that lasts</h1>
+        <p>Full‑stack engineer based in Abuja — 2+ years of shipping high-performance web apps, SaaS platforms, and enterprise solutions. Here's a selection of projects I've built or contributed to.</p>
+        <div class="dev-stats">
+          <span class="stat-badge"><i class="fas fa-map-marker-alt"></i> Abuja, Nigeria</span>
+          <span class="stat-badge"><i class="fas fa-laptop-code"></i> 15+ production projects</span>
+          <span class="stat-badge"><i class="fas fa-users"></i> 10+ happy clients</span>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- 1. CyberAce Consulting -->
+        <div class="project-card">
+          <div class="card-img">
+            <i class="fas fa-shield-alt"></i>
+            <div class="img-tag">Cybersecurity & ICT</div>
+          </div>
+          <div class="card-content">
+            <h3>CyberAce Consulting</h3>
+            <div class="tech-stack"><span class="tech">React</span><span class="tech">Tailwind</span><span class="tech">Node.js</span></div>
+            <p class="project-desc">Full‑stack platform for digital economy empowerment — cybersecurity assessments, business analytics, and ICT consulting. Built responsive dashboards & service modules.</p>
+            <div class="card-buttons">
+              <a href="https://brainardatdev.github.io/CyberAce/index.html" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="#" class="btn-github" onclick="alert('Source code available upon request. Contact me for details.'); return false;"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Haven X Fitness Gym (Premium) -->
+        <div class="project-card">
+          <div class="card-img">
+            <i class="fas fa-dumbbell"></i>
+            <div class="img-tag">Fitness Tech</div>
+          </div>
+          <div class="card-content">
+            <h3>Haven X Fitness Gym</h3>
+            <div class="tech-stack"><span class="tech">WordPress</span><span class="tech">Custom CSS/JS</span><span class="tech">PHP</span></div>
+            <p class="project-desc">Complete membership platform for premium gym in Abuja. Dynamic pricing tables, class scheduling, and membership management integration. Boosted conversions by 35%.</p>
+            <div class="card-buttons">
+              <a href="https://havenxfitnessgym.com" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Visit site</a>
+              <a href="#" class="btn-github" onclick="alert('Proprietary project — portfolio case study available on request.'); return false;"><i class="fab fa-github"></i> Case study</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. TitanSales (B2B Sales CRM) -->
+        <div class="project-card">
+          <div class="card-img">
+            <i class="fas fa-chart-line"></i>
+            <div class="img-tag">SaaS / CRM</div>
+          </div>
+          <div class="card-content">
+            <h3>TitanSales</h3>
+            <div class="tech-stack"><span class="tech">Next.js</span><span class="tech">Node.js</span><span class="tech">MongoDB</span></div>
+            <p class="project-desc">Enterprise sales platform with real‑time analytics, lead tracking, and pipeline automation. Architected backend APIs and optimized frontend performance.</p>
+            <div class="card-buttons">
+              <a href="https://titansales.ltd" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live demo</a>
+              <a href="#" class="btn-github" onclick="alert('GitHub repo available for collaborators — contact me'); return false;"><i class="fab fa-github"></i> Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. BinaTone Lifestyle -->
+        <div class="project-card">
+          <div class="card-img">
+            <i class="fas fa-spa"></i>
+            <div class="img-tag">Wellness & Brand</div>
+          </div>
+          <div class="card-content">
+            <h3>BinaTone Lifestyle</h3>
+            <div class="tech-stack"><span class="tech">Vue.js</span><span class="tech">Django</span><span class="tech">PostgreSQL</span></div>
+            <p class="project-desc">Luxury lifestyle brand platform — product catalog, wellness blog, and membership zones. Integrated payment gateway and admin dashboard.</p>
+            <div class="card-buttons">
+              <a href="https://binatonelifestyle.com" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Explore</a>
+              <a href="#" class="btn-github" onclick="alert('Collaborative project — source code under NDA, reach out for detailed contributions.'); return false;"><i class="fab fa-github"></i> Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Agoda (Frontend contribution) -->
+        <div class="project-card">
+          <div class="card-img">
+            <i class="fas fa-hotel"></i>
+            <div class="img-tag">TravelTech</div>
+          </div>
+          <div class="card-content">
+            <h3>Agoda (Travel platform)</h3>
+            <div class="tech-stack"><span class="tech">React</span><span class="tech">Redux</span><span class="tech">Web Components</span></div>
+            <p class="project-desc">Frontend performance optimizations & reusable component library for one of the world’s leading travel booking platforms. Improved load speed by 20%.</p>
+            <div class="card-buttons">
+              <a href="https://www.agoda.com" target="_blank" class="btn-demo"><i class="fas fa-globe"></i> Agoda.com</a>
+              <a href="#" class="btn-github" onclick="alert('Worked as part of enterprise frontend team — contribution details in resume.'); return false;"><i class="fab fa-github"></i> Portfolio note</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Tartar Abuja (Restaurant / lifestyle) -->
+        <div class="project-card">
+          <div class="card-img">
+            <i class="fas fa-utensils"></i>
+            <div class="img-tag">Food & Beverage</div>
+          </div>
+          <div class="card-content">
+            <h3>Tartar Abuja</h3>
+            <div class="tech-stack"><span class="tech">HTML5/CSS3</span><span class="tech">JavaScript</span><span class="tech">Scroll animations</span></div>
+            <p class="project-desc">Sophisticated restaurant landing page with online reservation flow, menu showcase, and engaging hero sections. Focused on brand identity & responsiveness.</p>
+            <div class="card-buttons">
+              <a href="https://tartarabuja.com/#" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Live preview</a>
+              <a href="#" class="btn-github" onclick="alert('Legacy project available on GitHub — request access.'); return false;"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Legacy Gym Project (Gym-Flow) -->
+        <div class="project-card">
+          <div class="card-img">
+            <i class="fas fa-heartbeat"></i>
+            <div class="img-tag">Fitness microsite</div>
+          </div>
+          <div class="card-content">
+            <h3>GymFlow (legacy)</h3>
+            <div class="tech-stack"><span class="tech">Bootstrap</span><span class="tech">jQuery</span><span class="tech">PHP</span></div>
+            <p class="project-desc">Early full‑stack gym website with class booking and membership forms. Demonstrated rapid prototyping & client collaboration.</p>
+            <div class="card-buttons">
+              <a href="https://brainardatdev.github.io/gym-/" target="_blank" class="btn-demo"><i class="fas fa-external-link-alt"></i> Archive view</a>
+              <a href="#" class="btn-github" onclick="alert('Repo migrated — ask for source demonstration.'); return false;"><i class="fab fa-github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. FEATURED: SchoolMaster DBMS (Database diagram in background already) -->
+        <div class="project-card featured-db">
+          <div class="card-img" style="background: #E9F2FF;">
+            <i class="fas fa-database" style="color:#1E3A8A;"></i>
+            <div class="img-tag">🏫 ERD driven</div>
+          </div>
+          <div class="card-content">
+            <h3>SchoolMaster DBMS</h3>
+            <div class="tech-stack"><span class="tech">PostgreSQL</span><span class="tech">Python/Flask</span><span class="tech">React Admin</span></div>
+            <p class="project-desc">Complete database management system for educational institutions — student records, enrollment, grades, instructor modules. ER diagram architecture visible in background, real-time query builder.</p>
+            <div class="card-buttons">
+              <a href="#" class="btn-demo" onclick="alert('🚀 Live demo: SchoolMaster DBMS with fully functional dashboard + ER diagram visualization. Contact me for access.'); return false;"><i class="fas fa-play"></i> Live demo</a>
+              <a href="#" class="btn-github" onclick="alert('GitHub repo with schema design, migration scripts & REST API — available on request.'); return false;"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- additional success note: Why work with me -->
+      <div style="background: linear-gradient(120deg, #F6FAFF, #FFFFFF); border-radius: 36px; padding: 36px 32px; margin: 20px 0 30px; text-align: center; border:1px solid #E3EEFF">
+        <i class="fas fa-code-branch" style="font-size: 2rem; color:#2563EB;"></i>
+        <h3 style="margin: 8px 0 12px;">Why partner with me?</h3>
+        <p style="max-width: 800px; margin: 0 auto; color: #2C3E66;">Every project above includes clean architecture, performance tuning, and client-first communication. With 2+ years of experience and a BSc in CS (Baze University, 2027), I combine modern engineering with business impact. Let's turn your vision into a scalable reality.</p>
+        <div style="margin-top: 24px;">
+          <a href="contact.html" id="contactCTAFooter" class="btn-demo" style="background:#2563EB;"><i class="fas fa-envelope"></i> Start a project</a>
+          <a href="resume.html" id="resumeCTA" class="btn-github" style="background:#EFF6FF;"><i class="fas fa-file-alt"></i> View resume</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Ameh Brainard — Software Engineer. Based in Abuja, FCT. <i class="fas fa-code"></i>  Built with precision & a database mindset.</p>
+      <p style="margin-top: 12px; font-size:0.8rem">
+        <i class="fab fa-linkedin"></i> <a href="#" id="linkedinDemo" style="text-decoration:none; color:#2563EB;">LinkedIn</a>&nbsp;|&nbsp;
+        <i class="fab fa-github"></i> <a href="https://github.com/brainardatDEV/" id="githubDemo" style="text-decoration:none; color:#2563EB;">GitHub</a>&nbsp;|&nbsp;
+        <i class="fas fa-globe"></i> <a href="#" id="portfolioDemo" style="text-decoration:none; color:#2563EB;">Brainard.dev</a>
+      </p>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // Simple interactions: simulate navigation alerts for other pages (consistent with multi-page requirement)
+  //document.querySelectorAll('.nav-menu a:not(.active-page)').forEach(link => {
+  //  link.addEventListener('click', (e) => {
+  //    e.preventDefault();
+    //  const page = link.innerText.trim();
+    //  alert(`📄 "${page}" page — coming soon. Meanwhile, explore my portfolio above or contact me directly at hello@brainard.dev`);
+   // });
+//  });
+//   const aboutLink = document.getElementById('aboutLink');
+//   const servicesLink = document.getElementById('servicesLink');
+//   const contactLink = document.getElementById('contactLink');
+//   if(aboutLink) aboutLink.addEventListener('click', (e) => { e.preventDefault(); alert("👋 About me: Software Engineer with 2+ years of full-stack experience, based in Abuja. Passionate about scalable systems & delivering business value. Currently pursuing BS at Baze University."); });
+//   if(servicesLink) servicesLink.addEventListener('click', (e) => { e.preventDefault(); alert("⚙️ Expertise: Full-stack development (React, Node, Python), API design, Database architecture, Performance optimization, and technical consulting."); });
+//   if(contactLink) contactLink.addEventListener('click', (e) => { e.preventDefault(); alert("📬 Let's connect: hello@brainard.dev | +234 812 345 6789. Available for freelance & full-time contracts."); });
+  
+  // const contactCTA = document.getElementById('contactCTAFooter');
+  // if(contactCTA) contactCTA.addEventListener('click', (e) => { e.preventDefault(); alert("📩 Reach out via email: hello@brainard.dev — I'll reply within 12h. Let's discuss your project!"); });
+  // const resumeCTA = document.getElementById('resumeCTA');
+  // if(resumeCTA) resumeCTA.addEventListener('click', (e) => { e.preventDefault(); alert("📄 Full resume + case studies available upon request. Contact me for a detailed PDF."); });
+  
+  // social demo
+  // const linkedinDemo = document.getElementById('linkedinDemo');
+  // const githubDemo = document.getElementById('githubDemo');
+  // const portfolioDemo = document.getElementById('portfolioDemo');
+  // if(linkedinDemo) linkedinDemo.addEventListener('click', (e) => { e.preventDefault(); alert("🔗 LinkedIn profile: linkedin.com/in/ibrahim-bello-software — recommendations & work history."); });
+  // if(githubDemo) githubDemo.addEventListener('click', (e) => { e.preventDefault(); alert("🐙 GitHub: github.com/brainard-codes — 20+ repos, open-source contributions, portfolio projects."); });
+  // if(portfolioDemo) portfolioDemo.addEventListener('click', (e) => { e.preventDefault(); alert("🌍 Personal portfolio website: ibrahim.dev (full case studies & client success stories)."); });
+</script>
+
+</body>
+</html>

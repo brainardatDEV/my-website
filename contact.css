@@ -1,0 +1,303 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FCFDFF;
+      color: #0B1120;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #E9F0F9;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 16px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0F2B5E, #2563EB);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1F2A44;
+      transition: 0.2s;
+      font-size: 0.95rem;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-menu a:hover, .nav-menu .active-page {
+      color: #2563EB;
+      border-bottom-color: #2563EB;
+    }
+
+    /* ========== CONTACT PAGE ANIMATIONS & STYLES ========== */
+    .contact-hero {
+      text-align: center;
+      padding: 48px 0 20px;
+      animation: fadeInUp 0.6s ease-out;
+    }
+    .contact-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(125deg, #0B2A5E, #3B82F6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 12px;
+    }
+    .contact-hero p {
+      color: #475569;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 48px 0 64px;
+    }
+
+    /* contact cards (info) */
+    .contact-info-panel {
+      flex: 1.2;
+      background: white;
+      border-radius: 40px;
+      padding: 32px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+      border: 1px solid #EFF3FC;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      animation: fadeInUp 0.6s 0.1s both;
+    }
+    .contact-info-panel:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 40px -12px rgba(37,99,235,0.15);
+    }
+
+    .info-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contact-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      padding: 10px 0;
+      border-bottom: 1px dashed #ECF3FA;
+    }
+    .contact-icon {
+      width: 52px;
+      height: 52px;
+      background: #EFF6FF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 28px;
+      font-size: 1.5rem;
+      color: #2563EB;
+      transition: 0.2s;
+    }
+    .contact-detail-item:hover .contact-icon {
+      background: #2563EB;
+      color: white;
+      transform: scale(1.02);
+    }
+    .detail-text strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+    .detail-text a, .detail-text span {
+      color: #1F2A44;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .detail-text a:hover {
+      color: #2563EB;
+    }
+    .social-links-contact {
+      display: flex;
+      gap: 18px;
+      margin-top: 32px;
+    }
+    .social-circle {
+      background: #F1F5F9;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 60px;
+      font-size: 1.3rem;
+      color: #1F2937;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .social-circle:hover {
+      background: #2563EB;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* form panel */
+    .contact-form-panel {
+      flex: 1.4;
+      background: white;
+      border-radius: 40px;
+      padding: 32px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+      border: 1px solid #EFF3FC;
+      animation: fadeInUp 0.6s 0.2s both;
+      transition: transform 0.3s;
+    }
+    .contact-form-panel:hover {
+      transform: translateY(-4px);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid #E2E8F0;
+      border-radius: 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #2563EB;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+    .btn-submit {
+      background: #0F172A;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 60px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-submit:hover {
+      background: #2563EB;
+      transform: scale(0.98);
+      box-shadow: 0 8px 18px rgba(37,99,235,0.3);
+    }
+    .thankyou-message {
+      margin-top: 24px;
+      padding: 14px;
+      background: #E6F7E6;
+      border-radius: 30px;
+      text-align: center;
+      font-weight: 500;
+      color: #1F7B1F;
+      transition: 0.2s;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    .thankyou-message.show {
+      opacity: 1;
+      transform: scale(1);
+      animation: pop 0.3s ease;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* floating thank you note card */
+    .floating-note {
+      background: linear-gradient(115deg, #EFF6FF, #FFFFFF);
+      border-radius: 28px;
+      padding: 20px 28px;
+      margin: 20px 0 20px;
+      text-align: center;
+      border-left: 6px solid #2563EB;
+      animation: fadeInUp 0.7s 0.3s both;
+    }
+    .floating-note i {
+      font-size: 1.8rem;
+      color: #2563EB;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 32px 0 40px;
+      border-top: 1px solid #EDF2F9;
+      color: #5F6F8D;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        padding: 0 20px;
+      }
+      .contact-hero h1 {
+        font-size: 2rem;
+      }
+      .contact-grid {
+        flex-direction: column;
+      }
+    }

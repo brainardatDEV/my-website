@@ -1,0 +1,207 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FCFDFF;
+      color: #0B1120;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #E9F0F9;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 16px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0F2B5E, #2563EB);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1F2A44;
+      transition: 0.2s;
+      font-size: 0.95rem;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-menu a:hover, .nav-menu .active-page {
+      color: #2563EB;
+      border-bottom-color: #2563EB;
+    }
+
+    /* ========== SKILLS PAGE STYLES ========== */
+    .skills-hero {
+      padding: 48px 0 20px;
+      text-align: center;
+    }
+    .skills-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(125deg, #0B2A5E, #3B82F6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 12px;
+    }
+    .skills-sub {
+      color: #475569;
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    /* skill categories grid */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      margin: 48px 0 64px;
+    }
+    .category {
+      background: white;
+      border-radius: 32px;
+      padding: 28px 32px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #EFF3FC;
+      transition: all 0.2s;
+    }
+    .category:hover {
+      border-color: #CFDFFF;
+      box-shadow: 0 20px 30px -12px rgba(37,99,235,0.08);
+    }
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+      border-bottom: 2px dashed #E2EDFF;
+      padding-bottom: 12px;
+    }
+    .category-header i {
+      font-size: 2rem;
+      color: #2563EB;
+      background: #EFF6FF;
+      padding: 12px;
+      border-radius: 20px;
+    }
+    .category-header h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .skill-item {
+      flex: 1 1 180px;
+      background: #F9FBFE;
+      border-radius: 28px;
+      padding: 18px 14px;
+      text-align: center;
+      transition: 0.2s;
+      border: 1px solid #F0F4FE;
+    }
+    .skill-item:hover {
+      transform: translateY(-4px);
+      background: #FFFFFF;
+      border-color: #BCD0FF;
+      box-shadow: 0 12px 20px -12px rgba(0,0,0,0.1);
+    }
+    .skill-icon {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      color: #1E40AF;
+    }
+    .skill-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .proficiency {
+      font-size: 0.75rem;
+      background: #EFF6FF;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 40px;
+      color: #1E3A8A;
+      font-weight: 600;
+    }
+    .rating-stars {
+      margin-top: 8px;
+      font-size: 0.7rem;
+      color: #FBBF24;
+      letter-spacing: 2px;
+    }
+    /* additional tools / extras */
+    .tool-badge-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .tool-badge {
+      background: #F1F5F9;
+      padding: 6px 18px;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .footer {
+      text-align: center;
+      padding: 32px 0 40px;
+      border-top: 1px solid #EDF2F9;
+      color: #5F6F8D;
+    }
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 20px;
+      }
+      .skills-hero h1 {
+        font-size: 2rem;
+      }
+      .category-header h2 {
+        font-size: 1.4rem;
+      }
+    }
